@@ -14,5 +14,5 @@ Attacker->>BotNet: Sends attack command to distributed BotNet
 BotNet->>WebServer: Floods with high volume, high density traffic
 Firewall-)WebServer: Detects and limits DDOS attack
 WebServer--)BotNet: Failed connections increase
-Attacker--xBotnet: Ceases attack.
+Attacker-->Botnet: Ceases attack.
 ```
