@@ -9,12 +9,15 @@ participant WebServer
 participant Firewall
 end
 
-Attacker-->WebServer: Identifies vulnerable server, ripe for the DDoS-ing
-Attacker->>BotNet: Sends attack command to distributed BotNet
-BotNet->>WebServer: Floods with high volume, high density traffic
-Firewall-)WebServer: Detects and limits DDOS attack
-WebServer--)BotNet: Failed connections increase
-Attacker-->Botnet: Ceases attack.
+Attacker-->WebServer: Identifies vulnerable WebServer as target
+Attacker->>BotNet: Creates botnet from large volume of distributed systems (IoT, etc)
+Attacker->>BotNet: Sends volumetric attack command to WebServer via BotNet
+BotNet-->WebServer: Bots send high volume of traffic and packets to server
+Firewall->>WebServer: Traffic analysis finds flooding, attempts to restrict port access, filter traffic
+BotNet-->Firewall: Packet flood overloads firewall, attack is successful
+create actor Themselves
+Attacker->>Themselves: Nice
+
 ```
 # Anatomy of a DDoS Attack
 
