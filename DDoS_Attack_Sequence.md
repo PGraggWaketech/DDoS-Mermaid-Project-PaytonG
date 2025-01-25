@@ -15,8 +15,6 @@ Attacker->>BotNet: Sends volumetric attack command to WebServer via BotNet
 BotNet-->WebServer: Bots send high volume of traffic and packets to server
 Firewall->>WebServer: Traffic analysis finds flooding, attempts to restrict port access, filter traffic
 BotNet-->Firewall: Packet flood overloads firewall, attack is successful
-create actor Themselves
-Attacker->>Themselves: Nice
 
 ```
 # Anatomy of a DDoS Attack
